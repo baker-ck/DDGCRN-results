@@ -8,27 +8,30 @@ We used the publicly available DDGCRN (https://github.com/wengwenchao123/DDGCRN)
 ```
 DDGCRN-results/
 ├── README.md
-├── pre-trained/
-├── pre-trained-experiments/
+├── pre-trained-model/
+├── pre-trained-model-results/
+│   └─── PEMSD3/
+│        └─── model.pth
+│   └─── PEMSD4/
+│        └─── model.pth
+│   └─── PEMSD7(M)/
+│        └─── model.pth
+│   └─── PEMSD7/
+│        └─── model.pth
+│   └─── PEMSD8/
+│        └─── model.pth
 ├── re-trained/
-├── re-trained-experiments/
-├── PEMSD3/
-│   └── model-metrla.ptexp1_0.pth
-│   └── model-metrla.ptexp1_1.pth
-│   └── model-metrla.ptexp1_2.pth
-├── PEMSD4/
-│   └── model-pemsbay.ptexp1_0.pth
-│   └── model-pemsbay.ptexp1_1.pth
-│   └── model-pemsbay.ptexp1_2.pth
-├── PEMSD7(M)/
-│   └── model-electricity-3.pt
-|   └── model-electricity-sampling-3.pt
-├── PEMSD7/
-│   └── model-exchange-rate-3.pt
-|   └── model-exchange-rate-sampling-3.pt
-├── PEMSD8/
-│   └── model-solar-3.pt
-|   └── model-solar-sampling-3.pt
+├── re-trained-model-results/
+│   └─── PEMSD3/
+│        └─── model.pth
+│   └─── PEMSD4/
+│        └─── model.pth
+│   └─── PEMSD7(M)/
+│        └─── model.pth
+│   └─── PEMSD7/
+│        └─── model.pth
+│   └─── PEMSD8/
+│        └─── model.pth
 └── requirements.txt
 └── environment.yaml
 ```
@@ -40,114 +43,65 @@ DDGCRN-results/
 - Conda environment exported in `environment.yaml`
 
 ### Results
-#### Model: DDGCRN (Weng et al., 2023)
-- Configuration: single step
-- Dataset: solar.txt
-- Horizons: 3
-- Batch size: 16
-- Runs: 3
-- Epochs/Run: 30
-- Criterion: validation loss
-
-|   valid    | RSE       | RAE      | corr.      |
-| ---------- | --------- | --------- | --------- |
-| mean      |    0.2324  |  0.1243  |   0.9797   |
-| std |    0.0009  |   0.0003  |   0.0001  |
-
-|   test    | RSE       | RAE      | corr.      |
-| ---------- | --------- | --------- | --------- |
-| mean      |    0.1750  | 0.0857 |   0.9858   |
-| std |    0.0013  |   0.0006  |   0.0001  |
-
-#### Model: MTGNN (Wu et al., 2020)
-- Configuration: single step with sampling
-- Dataset: solar.txt
-- Horizons: 3
-- Batch size: 16
-- Runs: 3
-- Epochs/Run: 30
-- Criterion: validation loss
-
-|   valid    | RSE       | RAE      | corr.      |
-| ---------- | --------- | --------- | --------- |
-| mean      |    0.2361  |  0.1246  |   0.9790   |
-| std |    0.0008  |   0.0012  |   0.0002  |
-
-|   test    | RSE       | RAE      | corr.      |
-| ---------- | --------- | --------- | --------- |
-| mean      |    0.1785  | 0.0858 |   0.9851   |
-| std |    0.0004  |   0.0006  |   0.0001  |
-
-
-#### Model: MTGNN (Wu et al., 2020)
-- Configuration: single step 
-- Dataset:  electricity.txt
-- Horizons: 3
-- Batch size: 16
-- Runs: 3
-- Epochs/Run: 30
-- Criterion: validation loss
-
-|   valid    | RSE       | RAE      | corr.      |
-| ---------- | --------- | --------- | --------- |
-| mean      |    0.0496  |  0.0348  |   0.9407   |
-| std |    0.0002  |   0.0002  |   0.0003  |
-
-|   test    | RSE       | RAE      | corr.      |
-| ---------- | --------- | --------- | --------- |
-| mean      |    0.0749  | 0.0417 |   0.9476   |
-| std |    0.0003  |   0.0003  |   0.0003  |
-
-#### Model: MTGNN (Wu et al., 2020)
-- Configuration: multi step 
-- Dataset: METR-LA
+#### Pre-trained Model: DDGCRN (Weng et al., 2023)
+- Dataset: PEMSD3
 - Horizons: 12
-- Batch size: 16
-- Runs: 3
-- Epochs/Run: 100
 - Criterion: validation loss
 
-|   valid    | MAE       | RMSE      | MAPE     |
+|    | MAE       | RMSE      | MAPE      |
 | ---------- | --------- | --------- | --------- |
-| mean      |    2.7548  |  5.7862  |   0.0774   |
-| std |    0.0034  |   0.0265  |   0.0005  |
+| Average Horizon      |      |    |     |
 
-|   test / horizon   | MAE-mean       | RMSE-mean      | MAPE-mean      | MAE-std       | RMSE-std      | MAPE-std      |
-| ---------- | --------- | --------- | --------- |--------- | --------- | --------- |
-| 3      |    2.6803  | 5.1870 |   0.0691   | 0.0050 | 0.0202 |0.0004|
-| 6      |    3.0441  | 6.1775|   0.0829   | 0.0015 | 0.0202 |0.0005|
-| 12      |    3.4747  | 7.2334 |   0.0996   | 0.0078 | 0.0322 |0.0010|
-
-#### Model: MTGNN (Wu et al., 2020)
-- Configuration: multi step 
-- Dataset: PEMS-BAY
+#### Pre-trained Model: DDGCRN (Weng et al., 2023)
+- Dataset: PEMSD4
 - Horizons: 12
-- Batch size: 16
-- Runs: 3
-- Epochs/Run: 100
 - Criterion: validation loss
 
-|   valid    | MAE       | RMSE      | MAPE     |
+|    | MAE       | RMSE      | MAPE      |
 | ---------- | --------- | --------- | --------- |
-| mean      |    1.5801  |  3.6220  |   0.0360   |
-| std |    0.0042  |   0.0119  |   0.0002  |
+| Average Horizon      |      |    |     |
 
-|   test / horizon   | MAE-mean       | RMSE-mean      | MAPE-mean      | MAE-std       | RMSE-std      | MAPE-std      |
-| ---------- | --------- | --------- | --------- |--------- | --------- | --------- |
-| 3      |    1.3295  | 2.7979 |   0.0279   | 0.0033 | 0.0153 |0.0002|
-| 6      |    1.6511  | 3.7422|   0.0372   | 0.0055 | 0.0203 |0.0001|
-| 12      |    1.9491  | 4.5015 |   0.0460   | 0.0116 | 0.0332 |0.0001|
+
+#### Pre-trained Model: DDGCRN (Weng et al., 2023)
+- Dataset: PEMSD7(M)
+- Horizons: 12
+- Criterion: validation loss
+
+|    | MAE       | RMSE      | MAPE      |
+| ---------- | --------- | --------- | --------- |
+| Average Horizon      |      |    |     |
+
+
+#### Pre-trained Model: DDGCRN (Weng et al., 2023)
+- Dataset: PEMSD7
+- Horizons: 12
+- Criterion: validation loss
+
+|    | MAE       | RMSE      | MAPE      |
+| ---------- | --------- | --------- | --------- |
+| Average Horizon      |      |    |     |
+
+#### Pre-trained Model: DDGCRN (Weng et al., 2023)
+- Dataset: PEMSD8
+- Horizons: 12
+- Criterion: validation loss
+
+|    | MAE       | RMSE      | MAPE      |
+| ---------- | --------- | --------- | --------- |
+| Average Horizon      |      |    |     |
 
 ### References
 
-The implementation for MTGNN (Wu et al.) is based on the KDD 2020 paper “Connecting the Dots: Multivariate Time Series Forecasting with Graph Neural Networks” (https://arxiv.org/abs/2005.11650), with the following citation:
+The implementation for DDGCRN (Weng et al.) is based on the Pattern Recognition 2023 paper “A decomposition dynamic graph convolutional recurrent network for traffic forecasting” (https://www.sciencedirect.com/science/article/abs/pii/S0031320323003710), with the following citation:
 
 ```bibtex
-@inproceedings{wu2020connecting,
-  title={Connecting the dots: Multivariate time series forecasting with graph neural networks},
-  author={Wu, Zonghan and Pan, Shirui and Long, Guodong and Jiang, Jing and Chang, Xiaojun and Zhang, Chengqi},
-  booktitle={Proceedings of the 26th ACM SIGKDD international conference on knowledge discovery \& data mining},
-  pages={753--763},
-  year={2020}
+@article{weng2023decomposition,
+  title={A decomposition dynamic graph convolutional recurrent network for traffic forecasting},
+  author={Weng, Wenchao and Fan, Jin and Wu, Huifeng and Hu, Yujie and Tian, Hao and Zhu, Fu and Wu, Jia},
+  journal={Pattern Recognition},
+  volume={142},
+  pages={109670},
+  year={2023},
+  publisher={Elsevier}
 }
 ```
