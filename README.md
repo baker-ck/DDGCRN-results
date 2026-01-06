@@ -14,13 +14,12 @@ DDGCRN-results/
 │   └─── PEMSD7.pth/
 │   └─── PEMSD7(M).pth/
 │   └─── PEMSD8.pth/
-├── pre-trained-model-results/
+├── testing/
 │   └─── PEMSD3_run.log
 │   └─── PEMSD4_run.log
 │   └─── PEMSD7_run.log
 │   └─── PEMSD7(M)_run.log
 │   └─── PEMSD8_run.log
-└── requirements.txt
 └── environment.yaml
 ```
 
