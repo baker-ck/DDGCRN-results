@@ -50,7 +50,7 @@ DDGCRN-results/
 
 |    | MAE       | RMSE      | MAPE      |
 | ---------- | --------- | --------- | --------- |
-| Average Horizon      |      |    |     |
+| Average Horizon      | 14.5219     | 25.1095   | 0.1449    |
 
 #### Pre-trained Model: DDGCRN (Weng et al., 2023)
 - Dataset: PEMSD4
@@ -59,7 +59,7 @@ DDGCRN-results/
 
 |    | MAE       | RMSE      | MAPE      |
 | ---------- | --------- | --------- | --------- |
-| Average Horizon      |      |    |     |
+| Average Horizon      |  18.5068    |  30.7219  |  0.1235   |
 
 
 #### Pre-trained Model: DDGCRN (Weng et al., 2023)
@@ -69,7 +69,7 @@ DDGCRN-results/
 
 |    | MAE       | RMSE      | MAPE      |
 | ---------- | --------- | --------- | --------- |
-| Average Horizon      |      |    |     |
+| Average Horizon      |  2.5939    | 5.3171   |  0.0654   |
 
 
 #### Pre-trained Model: DDGCRN (Weng et al., 2023)
@@ -79,7 +79,7 @@ DDGCRN-results/
 
 |    | MAE       | RMSE      | MAPE      |
 | ---------- | --------- | --------- | --------- |
-| Average Horizon      |      |    |     |
+| Average Horizon      |  19.6810    | 33.4056   | 0.0823    |
 
 #### Pre-trained Model: DDGCRN (Weng et al., 2023)
 - Dataset: PEMSD8
@@ -88,7 +88,7 @@ DDGCRN-results/
 
 |    | MAE       | RMSE      | MAPE      |
 | ---------- | --------- | --------- | --------- |
-| Average Horizon      |      |    |     |
+| Average Horizon      |  14.3187    |  23.7136  |  0.0938   |
 
 ### References
 
