@@ -20,18 +20,6 @@ DDGCRN-results/
 │        └─── model.pth
 │   └─── PEMSD8/
 │        └─── model.pth
-├── re-trained/
-├── re-trained-model-results/
-│   └─── PEMSD3/
-│        └─── model.pth
-│   └─── PEMSD4/
-│        └─── model.pth
-│   └─── PEMSD7(M)/
-│        └─── model.pth
-│   └─── PEMSD7/
-│        └─── model.pth
-│   └─── PEMSD8/
-│        └─── model.pth
 └── requirements.txt
 └── environment.yaml
 ```
