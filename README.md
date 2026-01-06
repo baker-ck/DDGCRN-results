@@ -8,18 +8,18 @@ We used the publicly available DDGCRN (https://github.com/wengwenchao123/DDGCRN)
 ```
 DDGCRN-results/
 ├── README.md
-├── pre-trained-model/
+├── pre-trained-models/
+│   └─── PEMSD3.pth/
+│   └─── PEMSD4.pth/
+│   └─── PEMSD7.pth/
+│   └─── PEMSD7(M).pth/
+│   └─── PEMSD8.pth/
 ├── pre-trained-model-results/
-│   └─── PEMSD3/
-│        └─── model.pth
-│   └─── PEMSD4/
-│        └─── model.pth
-│   └─── PEMSD7(M)/
-│        └─── model.pth
-│   └─── PEMSD7/
-│        └─── model.pth
-│   └─── PEMSD8/
-│        └─── model.pth
+│   └─── PEMSD3_run.log
+│   └─── PEMSD4_run.log
+│   └─── PEMSD7_run.log
+│   └─── PEMSD7(M)_run.log
+│   └─── PEMSD8_run.log
 └── requirements.txt
 └── environment.yaml
 ```
