@@ -1,48 +1,42 @@
-# Multivariate Time Series GNN (MTGNN) results
-This folder contains results for trained MTGNN models for solar, traffic, electricity and exchange rate multivariate time series data, from original Wu et al. (2020) paper
+# Decomposition Dynamic Graph Convolutional Recurrent Neural Network (DDGCRN) results
+This folder contains trained DDGCRN models on traffic data (PEMSD3, PEMSD4, PEMSD7, PEMSD8) and test results.
 
 ### Implementation notes
-We used the publicly available MTGNN (https://github.com/nnzhan/MTGNN) codebase as our training framework. No changes were made to model architectures or loss functions. However, we reduced the number of runs in train_single_step.py from 10 to 3 to speed up training of the initial baselines. We also used "--runs 3" in the multi-step training commands for METR-LA and PEMS-BAY. To resolve a tensor data type discrepancy, we changed the following line in both train_single_step.py and train_multi_step.py:
-
-                #id = torch.tensor(id).to(device)
-                id = torch.tensor(id, dtype=torch.long).to(device)
+We used the publicly available DDGCRN (https://github.com/wengwenchao123/DDGCRN) codebase as our training framework. No changes were made to model architectures, loss functions or optimisation measures.
 
 ### Repo structure
 ```
-MTGNN-results/
+DDGCRN-results/
 ├── README.md
-├── METR-LA/
+├── PEMSD3/
 │   └── model-metrla.ptexp1_0.pth
 │   └── model-metrla.ptexp1_1.pth
 │   └── model-metrla.ptexp1_2.pth
-├── PEMS-BAY/
+├── PEMSD4/
 │   └── model-pemsbay.ptexp1_0.pth
 │   └── model-pemsbay.ptexp1_1.pth
 │   └── model-pemsbay.ptexp1_2.pth
-├── electricity/
+├── PEMSD7(M)/
 │   └── model-electricity-3.pt
 |   └── model-electricity-sampling-3.pt
-├── exchange-rate/
+├── PEMSD7/
 │   └── model-exchange-rate-3.pt
 |   └── model-exchange-rate-sampling-3.pt
-├── solar/
+├── PEMSD8/
 │   └── model-solar-3.pt
 |   └── model-solar-sampling-3.pt
-├── traffic/
-│   └── model-traffic-3.pt
-|   └── model-traffic-sampling-3.pt
 └── requirements.txt
 └── environment.yaml
 ```
 
 ### Environment
-- Python:  3.7.1
-- PyTorch: 1.2.0
+- Python:  3.6.5
+- PyTorch: 1.8.1
 - Device: CUDA (NVIDIA GTX 1060, 3GB)
 - Conda environment exported in `environment.yaml`
 
 ### Results
-#### Model: MTGNN (Wu et al., 2020)
+#### Model: DDGCRN (Weng et al., 2023)
 - Configuration: single step
 - Dataset: solar.txt
 - Horizons: 3
