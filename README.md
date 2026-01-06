@@ -8,6 +8,10 @@ We used the publicly available DDGCRN (https://github.com/wengwenchao123/DDGCRN)
 ```
 DDGCRN-results/
 ├── README.md
+├── pre-trained/
+├── pre-trained-experiments/
+├── re-trained/
+├── re-trained-experiments/
 ├── PEMSD3/
 │   └── model-metrla.ptexp1_0.pth
 │   └── model-metrla.ptexp1_1.pth
